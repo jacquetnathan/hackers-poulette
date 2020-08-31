@@ -1,0 +1,22 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: "BELLOTA";
+    src:  url("assets/css/fonts/bellota_regular_macroman/Bellota-Regular-webfont.woff") format("woff");
+   }
+body {
+    font-family: "BELLOTA";
+    background-color: #303030;
+}
+img {
+	max-width: 400px;
+    height: 200px;
+    
+}
+footer {
+    font-size: 10px;
+}
