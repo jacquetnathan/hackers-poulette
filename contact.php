@@ -32,7 +32,7 @@ if (count($errors)> 0){
 	print_r($errors);
 	exit;
 }
-
+echo "test";
 sendmail($adresse);
 
 ?>
