@@ -1,7 +1,6 @@
 
 <?php
 
-echo "test";
 include_once('mailer.php');
 
 // recup des données + désinfection
@@ -30,9 +29,10 @@ if (false === filter_var($adresse, FILTER_VALIDATE_EMAIL)) {
 if (count($errors)> 0){
 	echo "There are mistakes!";
 	print_r($errors);
+	echo $errors;
 	exit;
 }
-echo "test";
+
 sendmail($adresse);
 
 ?>
