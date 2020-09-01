@@ -1,5 +1,5 @@
 <?php
-echo '
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,8 +9,8 @@ echo '
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
     <body class="text-white">
 
@@ -40,7 +40,8 @@ echo '
       <main>
                 
 
-        <form action="test.php" method="GET">
+        <form action="contact.php" method="GET">
+        <input id="website" class="d-none" name="website"  type="text" value=""  />
             <div class="offset-3 col-6">
                 <img src="img/hackers-poulette-logo.png" class="mx-auto d-block" id="logo" alt="logo">
                 <div class="form-row">
@@ -51,6 +52,7 @@ echo '
                     <div class="col font-weight-bold">
                     <label for="exampleFormControlInput1">Prénom :</label>
                       <input type="text" name="prenom" class="form-control" id="prenom" placeholder="Jean" required>
+                      
                     </div>
                 </div>
 
@@ -85,7 +87,7 @@ echo '
               </select>
             </div>
             <div class="form-group font-weight-bold">
-              <label for="exampleFormControlSelect2">Votre sujet :</label>
+              <label for="sujet">Votre sujet :</label>
               <select multiple class="form-control" name="sujet" id="sujet" required>
                 <option>Réclamation</option>
                 <option>Suggestion</option>
@@ -94,8 +96,9 @@ echo '
               </select>
             </div>
             <div class="form-group font-weight-bold">
-              <label for="exampleFormControlTextarea1">Votre message :</label>
+              <label for="message">Votre message :</label>
               <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+              
             </div>
 
             <button class="btn btn-primary font-weight-bold" type="submit" name="submit">Envoyer</button>
@@ -109,9 +112,17 @@ echo '
           <footer class="font-weight-bold text-center text-justify">
             Hackers Poulette - Nathan 2020
           </footer>
-        
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+          <script>
+            $('form').submit(function(){    
+                    if ($('input#website').val().length != 0) {
+                        return false;
+                    } 
+            });
+          </script>
+
     </body>
 </html>
 
-'
-?>
