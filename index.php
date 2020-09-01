@@ -40,7 +40,7 @@ echo '
       <main>
                 
 
-        <form action="contact.php" method="GET">
+        <form action="test.php" method="GET">
             <div class="offset-3 col-6">
                 <img src="img/hackers-poulette-logo.png" class="mx-auto d-block" id="logo" alt="logo">
                 <div class="form-row">
