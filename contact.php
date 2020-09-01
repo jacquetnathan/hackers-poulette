@@ -1,5 +1,7 @@
 
 <?php
+
+echo "test";
 include_once('mailer.php');
 
 // recup des données + désinfection
